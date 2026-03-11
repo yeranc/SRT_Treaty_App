@@ -1,0 +1,28 @@
+{
+  "generationParameters": {
+    "generationDate": "Thu Feb 19 2026 09:34:37 GMT+0000 (Coordinated Universal Time)",
+    "generatorPlatform": "SAP Business Application Studio",
+    "serviceType": "SAP System (ABAP On-Premise)",
+    "metadataFilename": "",
+    "serviceUrl": "http://mgss81a.aws.msg.de:44300/sap/opu/odata/sap/ZRI_S_TTY_DATA",
+    "appName": "zsrt_treaty",
+    "appTitle": "Selective Refresh Tool - Treaty",
+    "appDescription": "An SAP Fiori application.",
+    "appNamespace": "srt.tty",
+    "ui5Theme": "sap_horizon",
+    "ui5Version": "1.120.14",
+    "enableEslint": false,
+    "enableTypeScript": false,
+    "showMockDataInfo": true,
+    "generatorVersion": "1.20.2",
+    "template": "List Report Page V2",
+    "generatorName": "SAP Fiori Application Generator",
+    "entityRelatedConfig": [
+      {
+        "type": "Main Entity",
+        "value": "Treaty"
+      }
+    ],
+    "launchText": "To launch the generated application, run the following from the generated application root folder:\n\n```\n    npm start\n```"
+  }
+}
