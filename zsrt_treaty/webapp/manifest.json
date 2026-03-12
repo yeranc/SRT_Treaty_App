@@ -121,7 +121,7 @@
                                 "Actions": {
                                     "get_result": {
                                         "id": "get_resultButton",
-                                        "text": "Show Results",
+                                        "text": "Process Log",
                                         "press": "get_result",
                                         "requiresSelection": true
                                     }
