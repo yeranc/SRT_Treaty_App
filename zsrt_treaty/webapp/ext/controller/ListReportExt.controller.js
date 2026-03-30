@@ -102,6 +102,12 @@ sap.ui.define([
         _startExport: async function () {
             if (this._bDestroyed) return;
 
+            var aExportResults = this._aResults.slice();
+            if (aExportResults.length === 0 && this._iCurrentIndex >= this._aContexts.length) {
+                MessageToast.show("No records to download.", { duration: 3000 });
+                return;
+            }
+
             var that = this;
             var oModel = this.getView().getModel();
             var total = this._aContexts.length;
