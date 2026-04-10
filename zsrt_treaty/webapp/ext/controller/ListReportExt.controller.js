@@ -211,9 +211,11 @@ sap.ui.define([
                     growingThreshold: 50,
                     growingScrollToLoad: true,
                     columns: [
-                        new sap.m.Column({ header: new sap.m.Text({ text: "Source Treaty Number" }) }),
+                        new sap.m.Column({ header: new sap.m.Text({ text: "Treaty Number" }) }),
+                        new sap.m.Column({ header: new sap.m.Text({ text: "Object Type" }) }),
+                        new sap.m.Column({ header: new sap.m.Text({ text: "Source Object Number" }) }),
                         new sap.m.Column({ header: new sap.m.Text({ text: "Process Ref ID" }) }),
-                        new sap.m.Column({ header: new sap.m.Text({ text: "Target Treaty Number" }) }),
+                        new sap.m.Column({ header: new sap.m.Text({ text: "Target Object Number" }) }),
                         new sap.m.Column({ header: new sap.m.Text({ text: "Target System" }) }),
                         new sap.m.Column({ header: new sap.m.Text({ text: "Message Type" }) }),
                         new sap.m.Column({ header: new sap.m.Text({ text: "Message" }) })
@@ -226,6 +228,8 @@ sap.ui.define([
                     path: "/results",
                     template: new sap.m.ColumnListItem({
                         cells: [
+                            new sap.m.Text({ text: "{mvtgnr}" }),
+                            new sap.m.Text({ text: "{object_type}" }),
                             new sap.m.Text({ text: "{vtgnr}" }),
                             new sap.m.Text({ text: "{processingID}" }),
                             new sap.m.Text({ text: "{CreatedTreaty}" }),
@@ -289,9 +293,11 @@ sap.ui.define([
 
         _exportToExcel: function (aData, fnCallback) {
             var aCols = [
-                { label: "Source Treaty Number", property: "vtgnr" },
+                { label: "Treaty Number", property: "mvtgnr" },
+                { label: "Object Type", property: "object_type" },
+                { label: "Source Object Number", property: "vtgnr" },
                 { label: "Process Ref ID", property: "processingID" },
-                { label: "Target Treaty Number", property: "CreatedTreaty" },
+                { label: "Target Object Number", property: "CreatedTreaty" },
                 { label: "Target System", property: "syst" },
                 { label: "Message Type", property: "type" },
                 { label: "Message", property: "message" }
